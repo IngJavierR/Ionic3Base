@@ -8,8 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button large (click)="showAlert()">ShowAlert</button>
+  <button ion-button large (click)="showLoading()">ShowLoading</button>
+  <button ion-button large (click)="getInfoApi()">ConsumeApi</button>
+  <ion-item *ngFor="let tournament of tournamentList">
+    {{tournament.name}}
+  </ion-item>
 </ion-content>
